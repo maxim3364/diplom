@@ -16,9 +16,9 @@
   5. Установите все нужные модули:
 
 ```
-pip install sqlite3
-pip install messagebox
-pip install datetime
+pip install sqlite3;
+pip install messagebox;
+pip install datetime;
 ```
 
 ## Дополнительные материалы
