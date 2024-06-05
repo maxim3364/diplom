@@ -20,7 +20,7 @@ pip install sqlite3;
 pip install messagebox;
 pip install datetime;
 ```
-6. Нажните кнопку "Run 'main.py'" или запустите командой shift+f10
+6. Нажмите кнопку "Run 'main.py'" или запустите командой shift+f10
 
 ![alt text](изображение_2024-06-05_200737934.png)
 
