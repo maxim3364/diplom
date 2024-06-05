@@ -10,7 +10,7 @@
 1. Установите PyCharm, скачать его можено тут - (https://www.jetbrains.com/pycharm/download/?section=windows)
 2. Скачайте или клонируйте репозиторий: git clone - (https://github.com/maxim3364/diplom)
 3. В программе PyCharm откройте данный проект.
-4. Откройте терминал
+4. Откройте терминал:
 
 ![alt text](image.png)
   5. установите все нужные модули:
