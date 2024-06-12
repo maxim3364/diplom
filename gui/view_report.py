@@ -2,13 +2,9 @@ import tkinter as tk
 import sqlite3
 
 class ViewReport(tk.Frame):
-    def __init__(self, master, report_id, prev_page=None):
+    def __init__(self, master, report_id):
         super().__init__(master)
         self.pack()
-
-        self.master = master
-        self.report_id = report_id
-        self.prev_page = prev_page
 
         conn = sqlite3.connect('data/company.db')
         cursor = conn.cursor()
@@ -45,8 +41,5 @@ class ViewReport(tk.Frame):
 
     def go_back(self):
         self.destroy()
-        if self.prev_page:
-            self.prev_page(self.master)
-        else:
-            from gui.reports_menu import ReportsMenu
-            ReportsMenu(self.master)
+        from gui.reports_menu import ReportsMenu
+        ReportsMenu(self.master)

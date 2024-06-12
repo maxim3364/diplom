@@ -21,7 +21,7 @@ class AccountPage(tk.Frame):
 
         conn = sqlite3.connect('data/company.db')
         cursor = conn.cursor()
-        reports = cursor.execute("SELECT id, date FROM report WHERE worker_id=? ORDER BY date DESC", (worker_id,)).fetchall()
+        reports = cursor.execute("SELECT id, date FROM report WHERE worker_id=?", (worker_id,)).fetchall()
         conn.close()
 
         for report in reports:
@@ -35,7 +35,7 @@ class AccountPage(tk.Frame):
 
     def view_report(self, report_id):
         self.destroy()
-        ViewReport(self.master, report_id, prev_page=lambda master: AccountPage(master, self.worker_id))
+        ViewReport(self.master, report_id)
 
     def create_report(self):
         self.destroy()

@@ -47,7 +47,7 @@ class CreateReport(tk.Frame):
 
         comments_label = tk.Label(self, text="Комментарии")
         comments_label.pack(pady=5)
-        self.comments_entry = tk.Text(self, width=50, height=10)
+        self.comments_entry = tk.Entry(self)
         self.comments_entry.pack(pady=5)
 
         save_button = tk.Button(self, text="Сохранить", command=self.save_report)
@@ -62,7 +62,7 @@ class CreateReport(tk.Frame):
         departure = self.departure_entry.get()
         urgent_work = self.urgent_work_var.get()
         main_work = self.main_work_var.get()
-        comments = self.comments_entry.get("1.0", tk.END).strip()
+        comments = self.comments_entry.get()
 
         if date and arrival and departure and urgent_work != "Выберите статус" and main_work != "Выберите статус":
             conn = sqlite3.connect('data/company.db')

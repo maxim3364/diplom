@@ -30,4 +30,4 @@ class ReportsMenu(tk.Frame):
     def view_report(self, report_id):
         self.destroy()
         from gui.view_report import ViewReport
-        ViewReport(self.master, report_id, prev_page=ReportsMenu)
+        ViewReport(self.master, report_id)
